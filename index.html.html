@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rajashri I – Full Stack Developer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f7fa;--surface:#fff;--ink:#16223f;--muted:#55607a;--line:#d9dfea;--accent:#0b7f74;--accent-soft:#dff3f0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1730;--surface:#17213f;--ink:#eaf0ff;--muted:#a3aecb;--line:#2b3759;--accent:#4fd1c0;--accent-soft:#16363a}}
+:root[data-theme="dark"]{--bg:#0f1730;--surface:#17213f;--ink:#eaf0ff;--muted:#a3aecb;--line:#2b3759;--accent:#4fd1c0;--accent-soft:#16363a}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:860px;margin:0 auto;padding:0 1.5rem}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap;padding:1.5rem 0;font-weight:500}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+.hero{padding:3.5rem 0 3rem}
+.status{display:inline-flex;align-items:center;gap:.75rem;color:var(--muted);font-weight:500;margin-bottom:1.5rem}
+.beacon{position:relative;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.beacon::before,.beacon::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--accent);animation:ping 2.8s ease-out infinite}
+.beacon::after{animation-delay:1.4s}
+@keyframes ping{from{transform:scale(1);opacity:.9}to{transform:scale(4.2);opacity:0}}
+@media (prefers-reduced-motion:reduce){.beacon::before,.beacon::after{animation:none;opacity:.35;transform:scale(2.2)}html{scroll-behavior:auto}}
+h1{font-size:clamp(3rem,10vw,6rem);font-weight:800;letter-spacing:-.03em}
+.role{font-size:clamp(1.25rem,3vw,1.6rem);margin:.75rem 0 1.5rem;font-family:"Bricolage Grotesque",sans-serif;font-weight:600;color:var(--accent)}
+.lead{max-width:60ch;color:var(--muted);margin:0 0 2rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.25rem;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font-size:1.9rem;margin-bottom:1.5rem}
+.project{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:6px;padding:2rem}
+.project h3{font-size:1.6rem;margin-bottom:.25rem}
+.tag{color:var(--muted);font-size:.95rem;margin:0 0 1rem}
+ul{padding-left:1.2rem;margin:.75rem 0}
+li{margin:.4rem 0;max-width:68ch}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;list-style:none;margin:1rem 0 0}
+.chips li{margin:0;background:var(--accent-soft);color:var(--ink);padding:.25rem .75rem;border-radius:999px;font-size:.92rem;font-weight:500}
+.job{display:grid;grid-template-columns:11rem 1fr;gap:1.5rem}
+.job time{color:var(--muted);font-weight:500}
+.job h3{font-size:1.3rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+.skills h3{font-size:1.1rem;margin-bottom:.5rem}
+.skills .chips{margin-top:0}
+.edu p{margin:.25rem 0;color:var(--muted)}
+.contact a.big{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(1.3rem,4.5vw,2.2rem);font-weight:600;word-break:break-all}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:640px){.job{grid-template-columns:1fr;gap:.25rem}.project{padding:1.25rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Sections">
+<a href="#projects">Project</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+
+<header class="hero">
+<div class="status"><span class="beacon" aria-hidden="true"></span>Open to full stack internships and trainee roles</div>
+<h1>Rajashri I</h1>
+<p class="role">Aspiring Full Stack Developer</p>
+<p class="lead">I'm a Computer Science undergraduate who builds web apps from the interface to the database. My main project is a disaster management system that helps communities report, track and respond to emergencies in real time.</p>
+<div class="btns">
+<a class="btn primary" href="#projects">See my project</a>
+<a class="btn" href="mailto:rajashri56131@gmail.com?subject=Hello%20Rajashri%20-%20Opportunity&body=Hi%20Rajashri%2C%0A%0A" target="_top">Email me</a>
+</div>
+</header>
+
+<section id="projects">
+<h2>Project</h2>
+<article class="project">
+<h3>Disaster Management System</h3>
+<p class="tag">Personal / academic project · Full stack web application</p>
+<p>A web app for real-time disaster reporting, alerting and resource coordination for affected communities.</p>
+<ul>
+<li>Built a responsive front end with HTML, CSS and React.js for disaster reporting and alert dashboards.</li>
+<li>Developed back-end logic and APIs with Node.js to move data between the client and the database.</li>
+<li>Integrated Firebase Cloud for real-time storage, authentication and push notifications during emergencies.</li>
+<li>Designed location-based alerts, resource and volunteer coordination, and status tracking for reports.</li>
+</ul>
+<ul class="chips" aria-label="Tech stack"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React.js</li><li>Node.js</li><li>Firebase Cloud</li></ul>
+</article>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="job">
+<time>1 Jul 2025 – 31 Jul 2025</time>
+<div>
+<h3>Web Development Intern</h3>
+<p class="tag">Clovion Tech Solutions Pvt. Ltd.</p>
+<ul>
+<li>Assisted with development, testing and debugging of ongoing web projects.</li>
+<li>Built front-end components with HTML, CSS and JavaScript, and gained working knowledge of MySQL.</li>
+<li>Worked in an Agile team, tracking tasks in Jira.</li>
+<li>Wrote technical documentation and contributed ideas in team meetings.</li>
+<li>Picked up new technologies on the job under mentor guidance.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Languages</h3><ul class="chips"><li>Java</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></div>
+<div><h3>Frameworks and libraries</h3><ul class="chips"><li>React.js</li><li>Node.js</li></ul></div>
+<div><h3>Platforms and tools</h3><ul class="chips"><li>Firebase</li><li>Google Cloud</li><li>MySQL</li><li>Jira</li><li>Git</li></ul></div>
+<div><h3>Core competencies</h3><ul class="chips"><li>Full stack web development</li><li>REST APIs</li><li>Agile methodology</li><li>Debugging and testing</li></ul></div>
+</div>
+</section>
+
+<section id="education" class="edu">
+<h2>Education</h2>
+<h3>B.E., Computer Science and Engineering</h3>
+<p>Saveetha Engineering College</p>
+<p>Third year · Expected graduation 2028</p>
+</section>
+
+<section id="contact" class="contact">
+<h2>Let's talk</h2>
+<p>I'm looking for a full stack developer internship or trainee role. Send me a message.</p>
+<p><a class="big" href="mailto:rajashri56131@gmail.com?subject=Hello%20Rajashri%20-%20Opportunity&body=Hi%20Rajashri%2C%0A%0A" target="_top">rajashri56131@gmail.com</a></p>
+<p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=rajashri56131@gmail.com&su=Hello%20Rajashri%20-%20Opportunity&body=Hi%20Rajashri%2C%0A%0A" target="_blank" rel="noopener">Open in Gmail instead</a></p>
+<p>Phone: <a href="tel:+917305156131">+91 73051 56131</a><br>Location: Tuticorin, Tamil Nadu</p>
+</section>
+
+<footer>© 2026 Rajashri I</footer>
+</div>
+</body>
+</html>
